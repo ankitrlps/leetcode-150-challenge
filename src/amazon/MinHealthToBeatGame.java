@@ -1,3 +1,4 @@
+package amazon;
 
 public class MinHealthToBeatGame {
     static int minHealth(int[] damage, int armor) {
