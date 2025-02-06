@@ -1,4 +1,4 @@
-public class FindIndexFirstOccurrence {
+public class FindIndexFirstOccurrence28 {
 
     public int strStr(String haystack, String needle) {
         int len = needle.length();
