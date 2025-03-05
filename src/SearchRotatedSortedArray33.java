@@ -1,3 +1,4 @@
+
 public class SearchRotatedSortedArray33 {
 
     public int search(int[] nums, int target) {
@@ -6,8 +7,9 @@ public class SearchRotatedSortedArray33 {
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            if (nums[mid] == target)
+            if (nums[mid] == target) {
                 return mid;
+            }
 
             // if left array is sorted
             if (nums[left] <= nums[mid]) {
@@ -16,7 +18,7 @@ public class SearchRotatedSortedArray33 {
                 } else {
                     left = mid + 1;
                 }
-            } else { // right array is sorted
+            } else {
                 if (nums[mid] <= target && target <= nums[right]) {
                     left = mid + 1;
                 } else {
@@ -29,6 +31,6 @@ public class SearchRotatedSortedArray33 {
     }
 
     public static void main(String[] args) {
-        
+
     }
 }
