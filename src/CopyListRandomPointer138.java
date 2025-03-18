@@ -7,20 +7,20 @@ public class CopyListRandomPointer138 {
         Map<Node, Node> map = new HashMap<>();
 
         Node orig = head;
+
         while (orig != null) {
             map.put(orig, new Node(orig.val));
             orig = orig.next;
         }
 
         orig = head;
+
         while (orig != null) {
             Node curr = map.get(orig);
-            if (orig.next != null) {
-                curr.next = map.get(orig.next);
-            } else {
-                curr.next = null;
-            }
+
+            curr.next = map.get(orig.next);
             curr.random = map.get(orig.random);
+            
             orig = orig.next;
         }
 
